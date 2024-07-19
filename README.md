@@ -1,25 +1,26 @@
 
 # 🌟 Cloudflare Workers Monorepo Project Template 🌟
 
-<img src="https://github.com/user-attachments/assets/9eee11a7-f404-460f-a2f9-65dddc04d1dd" width="256" alt="logo" />
+<p align="center">
+<img align="left" src="https://github.com/user-attachments/assets/9eee11a7-f404-460f-a2f9-65dddc04d1dd" width="256" alt="logo" />
+</p>
 
-
-## 🚀 Overview
+### 🚀 Overview
 
 Welcome to the **Cloudflare Workers Monorepo Project Template**! This repository provides a structured environment for developing, testing, and deploying Cloudflare Workers using a monorepo setup managed with Yarn workspaces. The project includes shared utilities and a worker template to expedite your serverless application development workflow.
 
-## 🎯 Goal
+### 🎯 Goal
 
 The primary goal of this project is to offer a robust framework for creating and deploying serverless functions using Cloudflare Workers. It aims to provide a seamless development experience with shared resources, TypeScript support, and automated deployment scripts.
 
-## 🎨 Purpose
+### 🎨 Purpose
 
 The purpose of this repository is to:
 - 🏎️ Enable fast and efficient development of serverless applications via Cloudflare Workers.
 - 🔄 Promote code reuse through shared utilities.
 - 🛠️ Simplify the development and deployment process with comprehensive configurations and tools.
 
-## 🗂️ Repository Structure
+### 🗂️ Repository Structure
 
 ```plaintext
 cloudflare-workers-monorepo/
@@ -40,7 +41,7 @@ cloudflare-workers-monorepo/
             └── index.ts
 ```
 
-### 🔑 Key Directories and Files
+#### 🔑 Key Directories and Files
 
 - **`package.json`**: Root package management with Yarn workspaces. Includes scripts for various tasks.
 - **`tsconfig.json`**: TypeScript configuration for the entire monorepo.
@@ -57,19 +58,19 @@ You can import dependencies from local packages using the `@packages/<package_na
 import { generateRandomNumber, generateRandomString } from "@packages/shared";
 ```
 
-### 🌱 Creating a New Package/Worker
+#### 🌱 Creating a New Package/Worker
 
 If you want to create a new package or worker, you can copy the `worker-template` folder and adjust the names in both `package.json` and `wrangler.toml`. This approach avoids the need to run `yarn create cloudflare` and set up everything from scratch.
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 
-### 🛠️ Prerequisites
+#### 🛠️ Prerequisites
 
 - 🧶 Yarn (v4.3.1)
 - 🔧 Node.js
 - ☁️ Cloudflare Account (for deploying workers)
 
-### 🏗️ Installation
+#### 🏗️ Installation
 
 1. Clone this repository:
    ```bash
@@ -82,7 +83,7 @@ If you want to create a new package or worker, you can copy the `worker-template
    yarn
    ```
 
-### 👩‍💻 Development
+#### 👩‍💻 Development
 
 In the root `package.json`, several scripts are defined for managing the monorepo and Cloudflare Workers projects:
 
@@ -91,7 +92,7 @@ In the root `package.json`, several scripts are defined for managing the monorep
 - **`yarn types`**: Generate Cloudflare Workers type definitions for all workspaces.
 - **`yarn format`**: Format the codebase using Biome.
 
-### 📝 Usage
+#### 📝 Usage
 
 1. **Run a command in a specific workspace**:
    ```sh
@@ -113,7 +114,7 @@ In the root `package.json`, several scripts are defined for managing the monorep
    yarn format
    ```
 
-## ⚙️ Configuration in `wrangler.toml`
+### ⚙️ Configuration in `wrangler.toml`
 
 The `wrangler.toml` file is used to configure Cloudflare Workers. Below is a detailed breakdown of its contents:
 
@@ -121,7 +122,7 @@ The `wrangler.toml` file is used to configure Cloudflare Workers. Below is a det
 - **`compatibility_flags`**: Compatibility flags for specific features.
 - **`node_compat`**: Enable Node.js compatibility.
 
-### 🔧 Default Configuration (local and dev environment)
+#### 🔧 Default Configuration (local and dev environment)
 
 ```toml
 name = "worker-template"
@@ -136,7 +137,7 @@ kv_namespaces = [
 ]
 ```
 
-### 🔧 Staging Configuration
+#### 🔧 Staging Configuration
 
 ```toml
 [env.staging]
@@ -148,7 +149,7 @@ kv_namespaces = [
 ]
 ```
 
-### 🔧 Production Configuration
+#### 🔧 Production Configuration
 
 ```toml
 [env.production]
@@ -160,32 +161,32 @@ kv_namespaces = [
 ]
 ```
 
-### 🔑 Setting Secrets for Different Environments
+#### 🔑 Setting Secrets for Different Environments
 
 To set a secret key for the appropriate environment, run the following commands. These commands will prompt you to input the secret value in the command line.
 
-### Setup for Dev (Remote)
+#### Setup for Dev (Remote)
 ```sh
 yarn w worker-template wrangler secret put SECRET_KEY
 ```
 
-### Setup for Staging (Remote)
+#### Setup for Staging (Remote)
 ```sh
 yarn w worker-template wrangler secret put SECRET_KEY -e staging
 ```
 
-### Setup for Production (Remote)
+#### Setup for Production (Remote)
 ```sh
 yarn w worker-template wrangler secret put SECRET_KEY -e production
 ```
 
-### Local Development
+#### Local Development
 For secrets used only in local development (not to be confused with the secrets used in the “dev” environment), set the secret key as follows. **This step is required** because it will be used for typing (auto-generated after executing `yarn types`). You can put this default value into the `packages/<package_name>/.dev.vars` file, in this example `packages/worker-template/.dev.vars`. **Don’t worry**, it will not overwrite the remote secret keys.
 ```sh
 SECRET_KEY="value"
 ```
 
-### 📤 Deployment
+#### 📤 Deployment
 
 To deploy a worker, run the following command:
 
@@ -203,13 +204,13 @@ yarn w worker-template wrangler deploy --env staging
 yarn w worker-template wrangler deploy --env production
 ```
 
-### 🔧 Biome VS Code Extension
+#### 🔧 Biome VS Code Extension
 
 For better development experience, you can install the Biome extension for Visual Studio Code. This extension helps with code formatting and linting directly within your editor.
 
 - [Install Biome VS Code Extension](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 We welcome contributions! Please follow these steps to contribute:
 
@@ -219,11 +220,11 @@ We welcome contributions! Please follow these steps to contribute:
 4. Ensure the code passes linting and formatting checks.
 5. Submit a pull request.
 
-## 📜 License
+### 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-## 🙌 Acknowledgments
+### 🙌 Acknowledgments
 
 - [Cloudflare Workers](https://developers.cloudflare.com/workers/)
 - [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler)
