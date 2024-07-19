@@ -1,4 +1,8 @@
+
 # 🌟 Cloudflare Workers Monorepo Project Template 🌟
+
+<img src="https://github.com/user-attachments/assets/9eee11a7-f404-460f-a2f9-65dddc04d1dd" width="256" alt="logo" />
+
 
 ## 🚀 Overview
 
