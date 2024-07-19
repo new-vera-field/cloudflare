@@ -74,7 +74,7 @@ If you want to create a new package or worker, you can copy the `worker-template
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/husniadil/cloudflare-workers-monorepo-project-template
    cd cloudflare-workers-monorepo-project-template
    ```
 
@@ -82,6 +82,10 @@ If you want to create a new package or worker, you can copy the `worker-template
    ```bash
    yarn
    ```
+
+You can alternatively create a new repository by using GitHub's "**Use this template**" feature, located at the top right corner.
+
+<img width="203" alt="image" src="https://github.com/user-attachments/assets/8e2a23d7-1eeb-42b6-8d94-3e6c70274586" />
 
 #### 👩‍💻 Development
 
