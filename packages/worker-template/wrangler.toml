@@ -121,7 +121,7 @@ kv_namespaces = [
 # Bind another Worker service. Use this binding to call another Worker without network overhead.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
 # services = [
-#   { binding = "MY_SERVICE", script = "my-service" },
+#   { binding = "MY_SERVICE", service = "my-service" },
 # ]
 
 # Bind a Vectorize index. Use to store and query vector embeddings for semantic search, classification and other vector search use-cases.
