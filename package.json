@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "packageManager": "yarn@4.3.1",
   "private": true,
-  "workspaces": [
+  "workspaces": {
+  "packages": [
     "packages/**/*"
-  ],
+  ]
+}
   "scripts": {
     "w": "node ./workspace-foreach.js",
     "deploy": "yarn workspaces foreach --all run deploy",
