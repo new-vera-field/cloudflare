@@ -7,7 +7,7 @@
   "packages": [
     "packages/**/*"
   ]
-}
+},
   "scripts": {
     "w": "node ./workspace-foreach.js",
     "deploy": "yarn workspaces foreach --all run deploy",
